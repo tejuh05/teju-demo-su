@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KNN Flask Program</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>KNN Prediction App</h2>
+
+    <form method="POST">
+        <input type="text" name="t1" placeholder="Enter your name">
+        <br><br>
+
+        <input type="text" name="number" placeholder="Enter a number">
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if fname %}
+        <p class="name">Hello {{ fname }}</p>
+    {% endif %}
+
+    {% if prediction %}
+        <p class="output">Prediction: {{ prediction }}</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
